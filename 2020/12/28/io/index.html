@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>io | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Welcome to io  (java)根据需要导入相应的文件包 1.学会创建文件1234567File file &#x3D; new File(&quot;c:&#x2F;2.txt&quot;); # 括号里是文件路径	file.createNewFile();    file.mkdir(); # 创建文件夹代码## 创建文件FileOutputStream fileOutputStream &#x3D; new F">
+<meta property="og:type" content="article">
+<meta property="og:title" content="io">
+<meta property="og:url" content="http://example.com/2020/12/28/io/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Welcome to io  (java)根据需要导入相应的文件包 1.学会创建文件1234567File file &#x3D; new File(&quot;c:&#x2F;2.txt&quot;); # 括号里是文件路径	file.createNewFile();    file.mkdir(); # 创建文件夹代码## 创建文件FileOutputStream fileOutputStream &#x3D; new F">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-12-28T02:38:34.000Z">
+<meta property="article:modified_time" content="2020-12-28T03:14:03.204Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="java-io" class="h-entry article article-type-java" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/12/28/io/" class="article-date">
+  <time class="dt-published" datetime="2020-12-28T02:38:34.000Z" itemprop="datePublished">2020-12-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      io
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="Welcome-to-io-java"><a href="#Welcome-to-io-java" class="headerlink" title="Welcome to io  (java)"></a>Welcome to io  (java)</h3><p>根据需要导入相应的文件包</p>
+<h2 id="1-学会创建文件"><a href="#1-学会创建文件" class="headerlink" title="1.学会创建文件"></a>1.学会创建文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">File file = new File(<span class="string">&quot;c:/2.txt&quot;</span>); <span class="comment"># 括号里是文件路径</span></span><br><span class="line">	file.createNewFile();</span><br><span class="line">    file.mkdir(); <span class="comment"># 创建文件夹代码</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 创建文件</span></span><br><span class="line">FileOutputStream fileOutputStream = new FileOutputStream(<span class="string">&quot;c:/1.txt&quot;</span>);</span><br><span class="line">fileOutputStream.write(<span class="string">&quot;hahaha&quot;</span>.getBytes()); <span class="comment"># 将hahaha作为数组对象写进1.txt文件</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-利用io将文件快速传输（复制文件）"><a href="#2-利用io将文件快速传输（复制文件）" class="headerlink" title="2.利用io将文件快速传输（复制文件）"></a>2.利用io将文件快速传输（复制文件）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 复制文件</span></span><br><span class="line">FileInputStream fileInputStream = new FileInputStream(<span class="string">&quot;c:/1.txt&quot;</span>); <span class="comment"># 文件路径</span></span><br><span class="line">FileOutputStream fileOutputStream = new FileOutputStream(<span class="string">&quot;c:/1.txt&quot;</span>); <span class="comment"># 文件路径+被定义的文件名</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 放进一个byte的数组里面，传输更快，内容更完整</span></span><br><span class="line">byte[] data= new byte[1024]; </span><br><span class="line">int len;</span><br><span class="line"><span class="keyword">while</span>( (len=fileInputStream.read(data) )!=-1 )&#123;</span><br><span class="line">	fileOutputStream.write(data, 0, len);</span><br><span class="line">		  </span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment"># 关闭</span></span><br><span class="line">fileInputStream.close();</span><br><span class="line">fileOutputStream.close();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="3-将1-txt内容变到-String-a"><a href="#3-将1-txt内容变到-String-a" class="headerlink" title="3.将1.txt内容变到  String a"></a>3.将1.txt内容变到  String a</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 还是先创建文件</span></span><br><span class="line">FileInputStream fileInputStream = new  FileInputStream(<span class="string">&quot;c:/1.txt&quot;</span>);</span><br><span class="line">int len = fileInputStream.available(); <span class="comment"># 通过文件描述符获取文件的总大小</span></span><br><span class="line">	  </span><br><span class="line">byte[] data =new byte[len];</span><br><span class="line">fileInputStream.read(data);</span><br><span class="line">	  </span><br><span class="line">String a = new String(data);</span><br><span class="line">System.out.println(a);</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/28/io/" data-id="ckj88y1vg0001crsjfg636a5z" data-title="io" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/12/24/scrapy/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">scrapy</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/28/io/">io</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/24/scrapy/">scrapy</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/23/Ubuntu-setup/">Ubuntu setup</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/23/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2020 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

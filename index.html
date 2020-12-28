@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="java-io" class="h-entry article article-type-java" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/12/28/io/" class="article-date">
+  <time class="dt-published" datetime="2020-12-28T02:38:34.000Z" itemprop="datePublished">2020-12-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2020/12/28/io/">io</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="Welcome-to-io-java"><a href="#Welcome-to-io-java" class="headerlink" title="Welcome to io  (java)"></a>Welcome to io  (java)</h3><p>根据需要导入相应的文件包</p>
+<h2 id="1-学会创建文件"><a href="#1-学会创建文件" class="headerlink" title="1.学会创建文件"></a>1.学会创建文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">File file = new File(<span class="string">&quot;c:/2.txt&quot;</span>); <span class="comment"># 括号里是文件路径</span></span><br><span class="line">	file.createNewFile();</span><br><span class="line">    file.mkdir(); <span class="comment"># 创建文件夹代码</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 创建文件</span></span><br><span class="line">FileOutputStream fileOutputStream = new FileOutputStream(<span class="string">&quot;c:/1.txt&quot;</span>);</span><br><span class="line">fileOutputStream.write(<span class="string">&quot;hahaha&quot;</span>.getBytes()); <span class="comment"># 将hahaha作为数组对象写进1.txt文件</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-利用io将文件快速传输（复制文件）"><a href="#2-利用io将文件快速传输（复制文件）" class="headerlink" title="2.利用io将文件快速传输（复制文件）"></a>2.利用io将文件快速传输（复制文件）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 复制文件</span></span><br><span class="line">FileInputStream fileInputStream = new FileInputStream(<span class="string">&quot;c:/1.txt&quot;</span>); <span class="comment"># 文件路径</span></span><br><span class="line">FileOutputStream fileOutputStream = new FileOutputStream(<span class="string">&quot;c:/1.txt&quot;</span>); <span class="comment"># 文件路径+被定义的文件名</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 放进一个byte的数组里面，传输更快，内容更完整</span></span><br><span class="line">byte[] data= new byte[1024]; </span><br><span class="line">int len;</span><br><span class="line"><span class="keyword">while</span>( (len=fileInputStream.read(data) )!=-1 )&#123;</span><br><span class="line">	fileOutputStream.write(data, 0, len);</span><br><span class="line">		  </span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment"># 关闭</span></span><br><span class="line">fileInputStream.close();</span><br><span class="line">fileOutputStream.close();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="3-将1-txt内容变到-String-a"><a href="#3-将1-txt内容变到-String-a" class="headerlink" title="3.将1.txt内容变到  String a"></a>3.将1.txt内容变到  String a</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 还是先创建文件</span></span><br><span class="line">FileInputStream fileInputStream = new  FileInputStream(<span class="string">&quot;c:/1.txt&quot;</span>);</span><br><span class="line">int len = fileInputStream.available(); <span class="comment"># 通过文件描述符获取文件的总大小</span></span><br><span class="line">	  </span><br><span class="line">byte[] data =new byte[len];</span><br><span class="line">fileInputStream.read(data);</span><br><span class="line">	  </span><br><span class="line">String a = new String(data);</span><br><span class="line">System.out.println(a);</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/28/io/" data-id="ckj88y1vg0001crsjfg636a5z" data-title="io" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-scrapy" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/12/24/scrapy/" class="article-date">
+  <time class="dt-published" datetime="2020-12-24T07:05:21.000Z" itemprop="datePublished">2020-12-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2020/12/24/scrapy/">scrapy</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="welcome-to-scrapy"><a href="#welcome-to-scrapy" class="headerlink" title="welcome to scrapy!!!"></a>welcome to scrapy!!!</h2><p>这是一段简单的爬虫</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">import scrapy   <span class="comment">#导入</span></span><br><span class="line">import json     <span class="comment">#josn转换</span></span><br><span class="line">import requests <span class="comment">#请求</span></span><br><span class="line">from bs4 import BeautifulSoup <span class="comment">#从网页抓取数据</span></span><br><span class="line">import re</span><br><span class="line"></span><br><span class="line"><span class="comment"># 外面的    </span></span><br><span class="line">name_list = []</span><br><span class="line">aear_list = []</span><br><span class="line">num_list = []</span><br><span class="line">num_time_list = []</span><br><span class="line">person_time_list = []</span><br><span class="line">tel_time_list = []</span><br><span class="line"></span><br><span class="line">str_url = []</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def requests_post():</span><br><span class="line">    <span class="comment"># 定义请求头，防止找不到该网页</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 该网页的url</span></span><br><span class="line">    url = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    page = input(<span class="string">&#x27;页数:&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(page)</span><br><span class="line"></span><br><span class="line">    payload = &#123;</span><br><span class="line">        <span class="string">&#x27;canshu1&#x27;</span>: 1,</span><br><span class="line">        <span class="string">&#x27;canshu2&#x27;</span>:<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">return</span> headers,url,page,payload</span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    list_post = requests_post()</span><br><span class="line">    url = list_post[1]</span><br><span class="line">    headers = list_post[0]</span><br><span class="line">    payload = list_post[3] </span><br><span class="line">    page = list_post[2]</span><br><span class="line">    <span class="keyword">for</span> p <span class="keyword">in</span> range(int(page)):</span><br><span class="line">        <span class="comment"># post()在消息主体中发送所以要加data=payload</span></span><br><span class="line">        <span class="comment"># get() 在请求的url中发送不用加  get(url ,herders=headers) url = 每个页面相同的部分+不同的部分</span></span><br><span class="line">        <span class="comment"># 这里用的是 post()</span></span><br><span class="line">        r = requests.post(url, headers=headers ,data=payload)</span><br><span class="line">        r.encoding = <span class="string">&#x27;utf-8&#x27;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 用BeautifulSoup 解析网页抓取数据</span></span><br><span class="line">        soup = BeautifulSoup(r.text, <span class="string">&#x27;html.parser&#x27;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># “tr” 爬取的对应节点</span></span><br><span class="line">        <span class="comment"># “class_” 爬取对应节点的class</span></span><br><span class="line">        <span class="comment"># “id”  爬取对应节点的id</span></span><br><span class="line">        soup_tr = soup(<span class="string">&quot;tr&quot;</span>,class_=<span class="string">&quot;ItemStyle&quot;</span>)</span><br><span class="line">        <span class="keyword">for</span> tr <span class="keyword">in</span> soup_tr:</span><br><span class="line">            <span class="comment"># url</span></span><br><span class="line">            str_url.append(tr.contents[1].a[<span class="string">&#x27;href&#x27;</span>]);</span><br><span class="line">            <span class="comment"># tr td</span></span><br><span class="line">            <span class="comment"># print(tr.contents[1].text.replace(&quot; &quot;, &quot;&quot;).replace(&quot;\n&quot;, &quot;&quot;))</span></span><br><span class="line">            <span class="comment"># print(tr.contents[2].text.replace(&quot; &quot;, &quot;&quot;).replace(&quot;\n&quot;, &quot;&quot;))</span></span><br><span class="line">            <span class="comment"># print(tr.contents[3].text.replace(&quot; &quot;, &quot;&quot;).replace(&quot;\n&quot;, &quot;&quot;))</span></span><br><span class="line">            <span class="comment"># print(tr.contents[4].text.replace(&quot; &quot;, &quot;&quot;).replace(&quot;\n&quot;, &quot;&quot;))</span></span><br><span class="line">            <span class="comment"># print(tr.contents[5].text.replace(&quot; &quot;, &quot;&quot;).replace(&quot;\n&quot;, &quot;&quot;))</span></span><br><span class="line">            <span class="comment"># print(tr.contents[6].text.replace(&quot; &quot;, &quot;&quot;).replace(&quot;\n&quot;, &quot;&quot;))</span></span><br><span class="line">            <span class="built_in">print</span>()</span><br><span class="line">        <span class="comment"># 跟换页面</span></span><br><span class="line">        payload[<span class="string">&#x27;canshu1&#x27;</span>] += 1</span><br><span class="line"><span class="comment"># 执行</span></span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/24/scrapy/" data-id="ckj88y1vl0003crsjg3fh10fi" data-title="scrapy" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Ubuntu-setup" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/12/23/Ubuntu-setup/" class="article-date">
+  <time class="dt-published" datetime="2020-12-23T03:19:03.000Z" itemprop="datePublished">2020-12-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2020/12/23/Ubuntu-setup/">Ubuntu setup</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="下载镜像文件"><a href="#下载镜像文件" class="headerlink" title="下载镜像文件"></a>下载镜像文件</h1><p><a href="magnet:?xt=urn:btih:D1101A2B9D202811A05E8C57C557A20BF974DC8A">ubuntu下载链接</a></p>
+<h1 id="安装镜像"><a href="#安装镜像" class="headerlink" title="安装镜像"></a>安装镜像</h1><p>在VMware虚拟机上安装。<br>  注意：在这里配置信息时要根据自己电脑配置来对应，不要完全照着网络上的来，这个可能会导致系统运行慢或者卡死等现象！</p>
+<h1 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h1><p>安装hexo,有两个前提，没它们是不能完成hexo(Git,Node.js没有先后安装顺序)</p>
+<h2 id="1-Git安装"><a href="#1-Git安装" class="headerlink" title="1.Git安装"></a>1.Git安装</h2><p>只需要打开终端输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install git-core</span><br></pre></td></tr></table></figure>
+<h2 id="2-Node-js安装"><a href="#2-Node-js安装" class="headerlink" title="2.Node.js安装"></a>2.Node.js安装</h2><p><a target="_blank" rel="noopener" href="https://github.com/nodesource/distributions">NodeSource安装</a><br>输入以下代码即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ curl -sL https://rpm.nodesource.com/setup_15.x | bash -</span><br><span class="line">$ sudo apt-get install -y nodejs</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证是否安装好</span></span><br><span class="line"></span><br><span class="line">$ node -v  <span class="comment">#nodejs和npm的版本。</span></span><br><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
+<p>如果npm 没安装好(node自带npm，出现意外情况)，执行以下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install update</span><br><span class="line"></span><br><span class="line">$ sudo apt install npm</span><br></pre></td></tr></table></figure>
+<h2 id="3-hexo-安装"><a href="#3-hexo-安装" class="headerlink" title="3.hexo 安装"></a>3.hexo 安装</h2><p>终端输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line"><span class="comment"># 创建文件夹就可以开始使用了</span></span><br><span class="line"><span class="comment"># folder是文件夹名称</span></span><br><span class="line">$ hexo init &lt;folder&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/23/Ubuntu-setup/" data-id="ckj88y1vc0000crsja25hgg2q" data-title="Ubuntu setup" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/12/23/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2020-12-23T02:53:15.932Z" itemprop="datePublished">2020-12-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2020/12/23/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/23/hello-world/" data-id="ckj88y1vj0002crsj8twa6rwi" data-title="Hello World" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/28/io/">io</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/24/scrapy/">scrapy</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/23/Ubuntu-setup/">Ubuntu setup</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/23/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2020 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
